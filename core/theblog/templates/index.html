@@ -1,0 +1,13 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>The Blog Site Home</h1>
+    <p>Welcome to The Blog Site, a website developed by <em>Dan Miller</em> and <em>Mozilla Developer Network</em>!</p>
+    <h2>Dynamic content</h2>
+    <p>The Blog Site has the following record counts:</p>
+    <ul>
+        <li><strong>Blogs:</strong> {{ num_blogs }}</li>
+        <li><strong>Bloggers:</strong> {{ num_bloggers }}</li>
+    </ul>
+{% endblock %}
+
