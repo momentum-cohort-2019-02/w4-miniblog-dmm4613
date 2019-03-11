@@ -4,15 +4,15 @@
     <h1>Blogger: {{ blogger.name }}</h1>
 
     <p><strong>Bio </strong> {{ blogger.bio }}
-    <h2>Blogs list</h2>
-
-    {% if blog_list %}
+   
+    <!-- related manager (look up) -->
+    {% if blogger.blog_set.count %}
     <h3>Blogs list</h3>
     <ul>
 
-      {% for blog in blog_list %}
+      {% for blog in blogger.blog_set.all %}
       <li>
-        <a href="{{ blog.get_absolute_url }}">{{ blog.name }}</a> ({{blog.post_date}})</a>
+        <a href="{{ blog.get_absolute_url }}">{{ blog.title }}</a> ({{blog.date_of_blog}})</a>
       </li>
       {% endfor %}
 
